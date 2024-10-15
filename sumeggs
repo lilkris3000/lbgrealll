@@ -107,4 +107,3 @@ updateBillboardGui()
 -- Update if the character is added
 player.CharacterAdded:Connect(updateBillboardGui)
 
-updateAllParticleEmitters(HappyoverloadColorSequence)
