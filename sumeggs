@@ -107,3 +107,10 @@ updateBillboardGui()
 -- Update if the character is added
 player.CharacterAdded:Connect(updateBillboardGui)
 
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local awakeningFrame = playerGui:WaitForChild("Bars"):WaitForChild("Awakening")
+local imageLabel = awakeningFrame:WaitForChild("Bar")
+
+
+imageLabel.ImageColor3 = Color3.fromRGB(255, 105, 180)
