@@ -1,0 +1,110 @@
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local skillsGui = playerGui:WaitForChild("Skills")
+local containerFrame = skillsGui:WaitForChild("Container")
+local buttonsFolder = containerFrame:WaitForChild("Buttons")
+local fangDanceButton = buttonsFolder:WaitForChild("Glimpse of Power")
+local skillNameText = fangDanceButton:WaitForChild("SkillName")
+
+-- Change the text and color
+skillNameText.Text = "TwoFold"
+skillNameText.TextColor3 = Color3.fromRGB(255, 105, 180) -- RGB values for pink
+
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local skillsGui = playerGui:WaitForChild("Skills")
+local containerFrame = skillsGui:WaitForChild("Container")
+local buttonsFolder = containerFrame:WaitForChild("Buttons")
+local fangDanceButton = buttonsFolder:WaitForChild("Wolf Fang Flash")
+local skillNameText = fangDanceButton:WaitForChild("SkillName")
+
+-- Change the text and color
+skillNameText.Text = "Connecting Barrage"
+skillNameText.TextColor3 = Color3.fromRGB(255, 105, 180) -- RGB values for pink
+
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local skillsGui = playerGui:WaitForChild("Skills")
+local containerFrame = skillsGui:WaitForChild("Container")
+local buttonsFolder = containerFrame:WaitForChild("Buttons")
+local fangDanceButton = buttonsFolder:WaitForChild("Fang Dance")
+local skillNameText = fangDanceButton:WaitForChild("SkillName")
+
+-- Change the text and color
+skillNameText.Text = "Clover Fist"
+skillNameText.TextColor3 = Color3.fromRGB(255, 105, 180) -- RGB values for pink
+
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local skillsGui = playerGui:WaitForChild("Skills")
+local containerFrame = skillsGui:WaitForChild("Container")
+local buttonsFolder = containerFrame:WaitForChild("Buttons")
+local fangDanceButton = buttonsFolder:WaitForChild("Virgule Cascade")
+local skillNameText = fangDanceButton:WaitForChild("SkillName")
+
+-- Change the text and color
+skillNameText.Text = "Inverted Blitz"
+skillNameText.TextColor3 = Color3.fromRGB(255, 105, 180) -- RGB values for pink
+
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local awakeningFrame = playerGui:WaitForChild("Bars"):WaitForChild("Awakening")
+local nameLabel = awakeningFrame:WaitForChild("Percent")
+
+
+nameLabel.TextColor3 = Color3.fromRGB(255, 105, 180)
+
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local awakeningFrame = playerGui:WaitForChild("Bars"):WaitForChild("Awakening")
+local nameLabel = awakeningFrame:WaitForChild("Name")
+
+-- Change the text of the TextLabel to "hi"
+nameLabel.Text = "Happy Fiend Overload"
+nameLabel.TextColor3 = Color3.fromRGB(245, 201, 44)
+
+local RunService = game:GetService("RunService")
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local awakeningFrame = playerGui:WaitForChild("Bars"):WaitForChild("Awakening")
+local percentLabel = awakeningFrame:WaitForChild("Percent")
+
+RunService.RenderStepped:Connect(function()
+if percentLabel.Text == "AWAKEN [G]" then
+percentLabel.TextColor3 = Color3.fromRGB(245, 201, 44)
+percentLabel.Text = "Overload MAXIMUM!"
+end
+end)
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local function updateBillboardGui()
+local character = player.Character or player.CharacterAdded:Wait()
+local head = character:WaitForChild("Head")
+local billboardGui = head:FindFirstChildOfClass("BillboardGui")
+
+if billboardGui then
+local textLabel = billboardGui:FindFirstChildWhichIsA("TextLabel")
+if textLabel then
+textLabel.Text = "[ Happy Overload ]"
+textLabel.TextColor3 = Color3.fromRGB(255, 105, 180) -- RGB values for red
+end
+end
+end
+
+-- Run the function when the script loads
+updateBillboardGui()
+
+-- Update if the character is added
+player.CharacterAdded:Connect(updateBillboardGui)
+
+updateAllParticleEmitters(HappyoverloadColorSequence)
